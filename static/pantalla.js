@@ -3,19 +3,16 @@ function agregar(valor) {
     pantalla.value += valor;
 }
 
-function limpiar(valor) {
+function limpiar() {
     const pantalla = document.querySelector("input[name='pantalla']");
-    if (valor == 'c' || valor == 'C') { 
-        pantalla.value = '0';
-    }
+    pantalla.value = ''; // Limpiar la pantalla completamente
 }
 
-function retroceder(valor) {
-if( valor == "D") {
+function retroceder() {
     const pantalla = document.querySelector("input[name='pantalla']");
-    pantalla.value = pantalla.value.slice(0, -1)
+    pantalla.value = pantalla.value.slice(0, -1); // Eliminar el último carácter
 }
-}
+
 function inicio(valor) {
     const pantalla = document.querySelector("input[name='pantalla']");
     if(pantalla == null || pantalla ==[]){
